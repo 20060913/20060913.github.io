@@ -1,49 +1,37 @@
-<SCRIPT language=JavaScript> 
-function password() {  
-var testV = 1;  
-var pass1 = prompt('请输入密码:',''); 
-while (testV < 3) { 
-if (!pass1) 
-history.go(-1); 
-if (pass1 == "19870107") { 
-alert('密码正确!'); 
-break; 
-} 
-testV+=-1; 
-var pass1 = prompt('密码错误!请重新输入:'); 
-} 
-if (pass1!="password" & testV ==3) 
-history.go(-1); 
-return " "; 
-} 
-document.write(password()); 
-</SCRIPT>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-          <title>石林的周记</title>
-     </head>
-<head>
-	<meta charset="utf-8">
-	<title>石林的周记</title>
-</head><br/>
-<font size="10" color="blue">2024.03.30</font>
-<p>每次我上交周记的时候，都能发现我的周记被扒出来.</p>
-<p>然后被放在第一个.</p>
-<p>前几天我又发现刘子昂和杨景翔他们两个看我的周记.<p>
-<P>上一周我也发现他们看我的周记了.<p>
-<p>我都不知道他们在好奇我什么.<p>
-<p>以后我就在这里更新了.<p>
-<p>不想让他们看.<p>
-<p>周记我还正常交.<p>
-<p>评论写在本上就行.<p>
-<p>或者发我QQ上就行.<p>
-<p>我周末回家看.<p>
-<p>这次考试我对自己感觉不是太好.<p>
-<p>有好多地方还是不会.<p>
-<p>如果我要是再记几个公式的话.<p>
-<p>肯定又能多做几道题.<p>
-<p>语文的那个名句默写.<p>
-<p>最后一个我想不出来了.<p>
-<p>第二个我有个字还不会写.<p>
-<p>众女嫉余之蛾眉兮，谣诼谓余以善淫.<p>
-<p>“诼”我写成“浊”了.<p>
-<p>回头我再记记.<p>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石林的周记</title>
+    <link rel="stylesheet" href="登录.css">
+</head>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+	    <form action="http://20060913.github.io/home.html"> 
+            <!-- <label for="username">用户名</label> -->
+            <input type="text" id="uname" value="" placeholder="用户名"/><br>
+            <input type="password" id="pwd" value="" placeholder="密码"/><br>
+            <input type="submit" id="but" value="登录" onclick="return checkuser()"/> 
+        </form> 
+    </div>
+</body> 
+ 
+<script type="text/javascript"> 
+    function getValue(id) { 
+        return document.getElementById(id).value; 
+        // 查找元素
+    } 
+    function checkuser() { 
+        if(getValue('uname') == "石林" && getValue('pwd') == "20060913") { 
+            return true; 
+        }else { 
+            alert("登录名或密码错误！")
+            // 警告框
+            return false; 
+        } 
+    } 
+</script> 
+</html>
